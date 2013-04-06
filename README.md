@@ -9,4 +9,5 @@
 pip install -r requirements.txt
 python setup.py build
 python setup.py install
+pip install -e git+git:git@github.com:yishenggudou/weixin_en2zh.git#egg=weixin_en2zh
 ```
