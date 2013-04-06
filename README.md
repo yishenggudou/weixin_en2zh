@@ -14,4 +14,5 @@ pip install -e git+git:git@github.com:yishenggudou/weixin_en2zh.git#egg=weixin_e
 
 
 欢迎关注
-![en2zh ](qrcode_for_gh_0bd07407d9f6_1280.jpg "en2zh")
+
+![en2zh dada](/qrcode_for_gh_0bd07407d9f6_1280.jpg "en2zh")
