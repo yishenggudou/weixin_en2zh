@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.2'
 
 setup(name='weixin_en2zh',
       version=version,
@@ -13,13 +13,13 @@ setup(name='weixin_en2zh',
       author_email='haibolib@gmail.com',
       url='http://www.timger.info/about',
       license='MIT',
-      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      packages=find_packages(where='.',exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           # -*- Extra requirements: -*-
       ],
-      scripts = ['scripts/weixin_en2zh.py'],
+      scripts = ['scripts/weixin_en2zhserver.py'],
       entry_points="""
       # -*- Entry points: -*-
       """,

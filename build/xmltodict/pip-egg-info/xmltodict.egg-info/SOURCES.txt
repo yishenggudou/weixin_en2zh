@@ -1,5 +1,0 @@
-xmltodict.py
-pip-egg-info/xmltodict.egg-info/PKG-INFO
-pip-egg-info/xmltodict.egg-info/SOURCES.txt
-pip-egg-info/xmltodict.egg-info/dependency_links.txt
-pip-egg-info/xmltodict.egg-info/top_level.txt
