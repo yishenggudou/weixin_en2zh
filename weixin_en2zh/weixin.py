@@ -43,12 +43,23 @@ class MainHandler(tornado.web.RequestHandler):
         """
         recv = xmltodict.parse(self.request.body)['xml']
         text = recv['Content'].strip()
-        en2zh = translate.en2zh(text)
-        text_reply = reply_text_user(recv['ToUserName'],
-                                     recv['FromUserName'],
-                                     recv['CreateTime'],
-                                     'text',
-                                     en2zh)
+        if recv.get('Event') == 'subscribe':
+            hellotext = u"""欢迎关注en2zh机器人,
+                            en2zh是一个自动翻译的机器人,
+                            你输入的任何英文en2zh将会为你翻译成中文"""
+            text_reply = reply_text_user(recv['ToUserName'],
+                                         recv['FromUserName'],
+                                         recv['CreateTime'],
+                                         'text',
+                                         hellotext)
+
+        else:
+            en2zh = translate.en2zh(text)
+            text_reply = reply_text_user(recv['ToUserName'],
+                                         recv['FromUserName'],
+                                         recv['CreateTime'],
+                                         'text',
+                                         en2zh)
         self.write(text_reply)
         return
 
