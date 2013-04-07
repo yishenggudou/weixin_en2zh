@@ -37,6 +37,7 @@ class translate(object):
             `text`: str
                 需要转换的文本
         """
+        text = text.encode('utf-8').strip()
         values={'hl':'zh-CN','ie':'UTF-8','text':text,'langpair':"%s|%s" % (lin, lout)}
         data = urllib.urlencode(values)
         req = urllib2.Request(self.url, data)
@@ -62,4 +63,4 @@ class translate(object):
 if __name__ == "__main__":
     a = translate()
     print a.en2zh('hello')
-    print a.zh2en('你好')
+    print a.zh2en(u'你好')
